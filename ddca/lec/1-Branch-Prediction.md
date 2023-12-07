@@ -38,5 +38,11 @@ if(aa != bb) /b3/
 - idea:将分支结果和所有分支的"global T/NT history"联系起来，预测的结果采用GHR的值来预测
 - implementation:将"global T/NT history" of all branch记录在Global History Register(GHR)中，然后使用GHR去index Pattern History Table(PHT)这张表，表中记录在最近的过去看到的GHR的value，这个value可能通过2位饱和计数器来存储.
 - two level：即GHR + history at that GHR
+  
+如图所示：
 
+![Alt text](image/1-2.png)
+- GHR是个寄存器，用来编码先前分支的方向，这里是最后N个分支的方向
 
+- 对于示例代码，有内外两个循环，
+![Alt text](image/1-3.png)
